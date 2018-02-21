@@ -20,5 +20,20 @@
  5869  psql -l
  5870  psql -d coffee_review
  5871  node_modules/.bin/knex migrate:make create_table_coffees
+ npm i pg
+ 5874  node_modules/.bin/knex migrate:make create_table_coffees
+ 5875  node_modules/.bin/knex migrate:latest
+ 5876  psql -d coffee_review
+ 5877  git add .
+ 5878  git commit -m "added db migration"
+ 5879  git status
  */
- 
+
+/*
+ //checking database
+psql -d coffee_review
+\dt+
+\dt
+\q
+
+*?
