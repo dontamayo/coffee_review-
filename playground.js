@@ -29,11 +29,25 @@
  5879  git status
  */
 
-/*
+/* Psql
  //checking database
 psql -d coffee_review
 \dt+
-\dt
+\dt // accessing the tables
 \q
+SELECT * FROM coffees;
 
-*?
+*/
+
+//git dif == checking all your working on prgresss modifications
+//brew install httpie
+//http --form POST localhost:8000/coffees origin=Mexico price=13.99 roast=Medium flavor=tart,*citrus,*floral
+// curl -X POST -d origin=mars -d roast=red localhost:8000/coffees
+// http --form POST localhost:8000/coffees origin=Mexico price=13.99 roast=Medium flavor=tart,+citrus,+whatever
+// http localhost:8000/coffees
+
+//curl -X POST -d origin=philippines -d flavor=mandarin -d price=7.99 -d roast=wonderful  localhost:8000/coffees
+//curl -X PATCH -d flavor=intense localhost:8000/coffees/2
+//curl -X DELETE localhost:8000/coffees/2
+//node_modules/.bin/knex seed:make seeds
+//node_modules/.bin/knex seed:run
